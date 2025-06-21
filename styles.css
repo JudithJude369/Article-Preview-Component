@@ -151,7 +151,7 @@ select {
   align-items: center;
   flex-direction: column;
 
-  padding: 2rem 1.5rem 0 1.5rem;
+  padding: 2rem 1.5rem 0.8rem 1.5rem;
 }
 
 .article-wrapper {
@@ -228,7 +228,7 @@ select {
   border-bottom-right-radius: 0.8rem;
   padding: 1rem;
   position: absolute;
-  top: 80%;
+  top: 77%;
   align-items: center;
   display: none;
   transition: 0.3s ease-in-out all;
