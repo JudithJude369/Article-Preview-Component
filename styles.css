@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+/* CSS DESIGN USING MOBILE-FIRST APPROACH */
+:root {
+  /* Typography */
+  --FF: "Manrope", sans-serif;
+  --FS: 0.8rem;
+  /* --FSH: 1rem; */
+  /* Colors */
+  --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+  --Grayish-Blue: hsl(212, 23%, 69%);
+  --Light-Grayish-Blue: hsl(210, 46%, 95%);
+  --white: hsl(0, 100%, 100%);
+  /* comments */
+  /* --white: hsl(0, 100%, 100%);
+  --Purple-100: hsl(275, 100%, 97%);
+  --Purple-600: hsl(292, 16%, 49%);
+  --Purple-950: hsl(292, 42%, 14%);
+  --darkorchid: hsl(280, 61%, 50%);
+  --purple: #645cff;
+  --grey-900: #0f172a;
+  --grey-50: #f8fafc;  */
+}
+
+/* CSS RESET */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  scroll-behavior: smooth;
+  overflow: scroll;
+  font-size: 100%;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+p {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: capitalize;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  /* transition: background-color 3s ease-in-out; */
+  /* transition: color 3s ease-in-out; */
+  min-height: 100vh;
+  line-height: 1;
+  font-optical-sizing: auto;
+  font-family: var(--FF);
+  font-size: var(--FS);
+  background-color: var(--Light-Grayish-Blue);
+  color: var(--Very-Dark-Grayish-Blue);
+  font-weight: 500;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+/* h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+} */
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* content style */
+.container {
+  background-color: var(--white);
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  max-width: 900px;
+  width: 88%;
+  display: flex;
+  flex-direction: column;
+}
+
+.drawerImg {
+  aspect-ratio: 1/1;
+  width: 100%;
+  max-height: 15rem;
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 2rem 1.5rem 0 1.5rem;
+}
+
+.article-wrapper {
+  margin-bottom: 1rem;
+}
+
+.content h4 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 1.5rem 0;
+  text-align: justify;
+}
+
+.content p {
+  line-height: 1.2;
+  text-align: justify;
+  color: var(--Desaturated-Dark-Blue);
+}
+
+.avatar-wrapper {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 25%;
+  max-height: 3rem;
+  aspect-ratio: 1/1;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.avatar-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.icon-content {
+  position: relative;
+}
+.name {
+  align-self: center;
+  margin-top: -1rem;
+}
+
+.name h4 {
+  font-weight: 700;
+}
+
+.name p {
+  color: var(--Desaturated-Dark-Blue);
+  margin-top: -0.9rem;
+}
+
+.icon {
+  background: var(--Light-Grayish-Blue);
+  border-radius: 50%;
+  width: 10vw;
+  cursor: pointer;
+}
+
+.icon:hover,
+.icon:active {
+  background: var(--Very-Dark-Grayish-Blue);
+}
+.share-container {
+  background: var(--Very-Dark-Grayish-Blue);
+  /* display: flex; */
+  gap: 2rem;
+  width: 88vw;
+  border-bottom-left-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+  padding: 1rem;
+  position: absolute;
+  top: 80%;
+  align-items: center;
+  display: none;
+  transition: 0.3s ease-in-out all;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.share-container P {
+  font-weight: 700;
+}
+
+.icon-share {
+  width: 10%;
+  cursor: pointer;
+  background: var(--Light-Grayish-Blue);
+  border-radius: 50%;
+}
+
+.active {
+  display: block;
+}
+/* box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease-in-out all; */
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+  .avatar-wrapper {
+    gap: 20rem;
+  }
+
+  .icon {
+    width: 5vw;
+  }
+
+  .share-container {
+    top: 68%;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  body {
+    justify-content: center;
+  }
+
+  .container {
+    max-width: 700px;
+    width: 80%;
+    gap: 1rem;
+    flex-direction: row;
+  }
+
+  .drawerImg {
+    max-height: 100vh;
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.8rem;
+  }
+
+  .avatar-wrapper {
+    margin-top: 1rem;
+    gap: 6rem;
+  }
+
+  .icon {
+    width: 2vw;
+  }
+
+  .share-container {
+    justify-content: space-between;
+    width: 15%;
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+    padding: 1rem;
+    position: absolute;
+    top: 50%;
+    right: 25%;
+  }
+  .share-container:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 6rem;
+    border-top: 20px solid blue;
+    border-top-color: inherit;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+  }
+  .icon-share {
+    display: none;
+  }
+}
