@@ -68,7 +68,7 @@ icon.addEventListener("click", () => {
     shareContainer.style.display = "none";
   }
 });
-
+```
 ### Continued development
 I hope to build more with vanilla Javascript, and hopefully improve my javascript knowledge and responsive design with CSS.
 
@@ -79,3 +79,4 @@ I hope to build more with vanilla Javascript, and hopefully improve my javascrip
 
 ## Acknowledgments
 I would like to really acknowledge freecodecamp for making learning easy and resources accessible for everyone.
+
